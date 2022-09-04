@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block main %}
+<h2>会員ページ</h2>
+<p>{{ user }}さん、こんにちは！</p>
+
+<!--各ボタン-->
+<a href="#" class="btn-real-dent">
+    <i class="fa fa-home"></i>
+  </a>
+  <button type="button" class="btn btn-info">遺失物新規登録</button>
+  <button type="button" class="btn btn-info">遺失物書類作成</button>
+  <button type="button" class="btn btn-info">遺失物データベース閲覧</button>
+<p><a href="{% url 'logout' %}">ログアウト</a></p>
+<p><a href="{% url 'password_change' %}">パスワードの変更</a></p>
+<p><a href="{% url 'password_reset' %}">パスワードを忘れた場合</a></p>
+{% endblock %}
